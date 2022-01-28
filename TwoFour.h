@@ -1,0 +1,14 @@
+//
+// Created by geanc on 27 ene. 2022.
+//
+
+#ifndef DATASTRUCTURESPROJECT2_TWOFOUR_H
+#define DATASTRUCTURESPROJECT2_TWOFOUR_H
+
+
+class TwoFour {
+
+};
+
+
+#endif //DATASTRUCTURESPROJECT2_TWOFOUR_H
