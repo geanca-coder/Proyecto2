@@ -6,8 +6,13 @@
 #define DATASTRUCTURESPROJECT2_NODEDATA_H
 
 
+#include <iostream>
+using namespace std;
 class NodeData {
-
+public:
+    int dData;
+    explicit NodeData(int dd);
+    operator string();
 };
 
 

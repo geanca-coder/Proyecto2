@@ -3,3 +3,12 @@
 //
 
 #include "NodeData.h"
+
+NodeData::NodeData(int dd) {
+    this->dData = dd;
+}
+
+NodeData::operator string() {
+    return this->dData+",";
+}
+
