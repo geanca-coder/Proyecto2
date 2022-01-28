@@ -9,6 +9,6 @@ NodeData::NodeData(int dd) {
 }
 
 NodeData::operator string() {
-    return this->dData+",";
+    return to_string(dData)+",";
 }
 
