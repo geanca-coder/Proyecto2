@@ -66,14 +66,13 @@ string TwoFour::displayTree(int i) {
     string variable;
     if (i == 0)recDisplayTree(root, 0, 0, variable);
     else inOrderDisplay(root, 0, 0,variable);
-    return variable;
+    return variable+"\n";
 }
 
 void TwoFour::recDisplayTree(Node *thisNode, int level,int childNumber, string &variable) {
-    variable += "level="+ to_string(level)+ "child="+ to_string(childNumber)+"  \n";
+    variable += "level="+ to_string(level)+ " child="+ to_string(childNumber)+": ";
     variable += thisNode->displayNode();
     variable+="\n";
-
     int numItems = thisNode->getNumItems();
     for (int i = 0; i < numItems+1; ++i) {
         Node* nextNode = thisNode->getChild(i);
