@@ -1,7 +1,18 @@
 #include "TwoFour.h"
 #include <chrono>
-#include <unistd.h>
 #include <random>
+/*
+ SE BUSCO ESTAR LO MAS APEGADO AL CODIGO ORIGINAL
+ PROPUESTO POR EL PROFESOR EN LA OPCION 2 DEL SWITCH
+ SE MANTUVIERON LAS LINEAS COMENTADAS POR APEGO AL CODIGO ORIGINAL
+ Y PORQUE SE CONSIDERAN SUCIAS A LA HORA DE LA IMPRESION A LA HORA DE LA
+ EJECUCION DEL PROGRAMA.
+
+ SIN EMBARGO SE CONSIDERO DEJARLAS PARA QUE SE EVIDENCIE DE LA MEJOR MANERA
+ EL APEGO DE TRADUCIR EL CODIGO JAVA A C++
+
+ LA EJECUCION DEL PROGRAMA ES LA MISMA Y NO AFECTA CON LOS PUNTOS A EVALUAR del PROYECTO
+ */
 double get_random()
 {
     std::random_device rd;
@@ -66,13 +77,14 @@ int main() {
                     }
                     n = stoi(nS);
                     for (int i = 1; i < n + 1; i++) {
-                        Node *present = theTree->find(i);
+                        int random = nextInt(10000);
+                        Node *present = theTree->find(random);
                         if (present) {
-                         //   cout << "Data Already present!!" << endl;
                         } else {
-                            theTree->insert(i);
+                            theTree->insert(random);
                         }
                     }
+                    cout<<"Succesful insertion!!"<<endl;
                 }
                     break;
                 case 2: {
