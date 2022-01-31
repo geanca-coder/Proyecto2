@@ -66,11 +66,12 @@ int main() {
                     }
                     n = stoi(nS);
                     for (int i = 1; i < n + 1; i++) {
-                        Node *present = theTree->find(i);
+                        int random = nextInt(10000);
+                        Node *present = theTree->find(random);
                         if (present) {
                          //   cout << "Data Already present!!" << endl;
                         } else {
-                            theTree->insert(i);
+                            theTree->insert(random);
                         }
                     }
                 }
