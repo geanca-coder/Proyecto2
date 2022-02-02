@@ -8,9 +8,12 @@ Node::Node() {
     this->numItems = 0;
     this->parent = nullptr;
     childArray = new Node*[ORDER];
-    for(int i = 0 ; i <ORDER; i++) childArray[i] = nullptr;
     itemArray = new NodeData*[ORDER];
-    for(int i = 0; i <ORDER; i++) itemArray[i] = nullptr;
+    for(int i = 0 ; i <ORDER; i++) {
+        childArray[i] = nullptr;
+        itemArray[i] = nullptr;
+    }
+
 }
 
 
@@ -158,8 +161,10 @@ Node *Node::getSibling(int theValue) {
 }
 
 Node::~Node() {
-    for(int i = 0; i <ORDER; i++) delete childArray[i];
-    for(int i = 0; i <ORDER; i++) delete itemArray[i];
+    for(int i = 0; i <ORDER; i++){
+        delete childArray[i];
+        delete itemArray[i];
+    }
     delete childArray;
     delete itemArray;
 }
